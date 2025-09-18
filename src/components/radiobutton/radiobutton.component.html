@@ -1,0 +1,7 @@
+<div class="d-flex">
+    <label *ngFor="let item of valueList; index as i">{{item.Text}}
+      <input type="radio" kendoRadioButton name="{{name}}" [value]="item.Value" [disabled]="disabled"
+        [required]="required" (change)="onChange(item.Value)" class="mr-2" [checked]="i===1">
+        <span></span>
+    </label>
+</div>

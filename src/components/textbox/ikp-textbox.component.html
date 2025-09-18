@@ -1,0 +1,16 @@
+<div class="form_control">
+  <kendo-textbox-container [floatingLabel]="floatingLabel" name="container">
+    <input [type]="type" *ngIf="!showCalenderIcon" kendotextBox [value]="innerValue" [(ngModel)]="value"
+    [required]="required" [disabled]="disabled" [maxlength]="maxLength" (keypress)="onKeyPress($event)"
+    (paste) ="onPaste($event)" [email]="isEmail" (blur)="onBlur ($event)" [autocomplete]="autocomplete">
+
+    <kendo-textbox *ngIf="showCalenderIcon" [value]="innerValue" [(ngModel)]="value" [required]="required"
+     [disabled]="disabled" [maxlength]="maxLength">
+    <ng-template kendoTextBoxsuffixTemplate>
+    <button kendoButton look="clear" icon="calendar"></button>
+    </ng-template> 
+</kendo-textbox>
+</kendo-textbox-container>
+</div>
+
+<!-- ngStyle eklenecek -->
